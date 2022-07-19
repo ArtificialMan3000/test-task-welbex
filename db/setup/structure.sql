@@ -1,4 +1,4 @@
-CREATE TABLE "Task table" (
+CREATE TABLE "task_table" (
   "id" bigint generated always as identity,
   "date" date NOT NULL,
   "name" varchar(40) NOT NULL,
@@ -6,4 +6,4 @@ CREATE TABLE "Task table" (
   "distance" integer NOT NULL
 );
 
-ALTER TABLE "Task table" ADD PRIMARY KEY ("id");
+ALTER TABLE "task_table" ADD PRIMARY KEY ("id");

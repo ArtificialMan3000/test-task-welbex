@@ -1,4 +1,4 @@
-INSERT INTO "Task table"
+INSERT INTO "task_table"
   ("date", "name", "amount", "distance")
 VALUES
   ('2011-03-12','Name 1',12, 1000),
