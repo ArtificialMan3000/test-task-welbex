@@ -1,0 +1,46 @@
+{
+  "endpoints": {
+    "entries": { "get": "/getEntries" }
+  },
+  "entries": {
+    "fields": [
+      {
+        "name": "id",
+        "isShown": false,
+        "isFilteredBy": false,
+        "isKey": true
+      },
+      {
+        "name": "date",
+        "isShown": true,
+        "string": "Дата",
+        "isFilteredBy": false
+      },
+      {
+        "name": "name",
+        "isShown": true,
+        "string": "Название",
+        "isFilteredBy": true
+      },
+      {
+        "name": "amount",
+        "isShown": true,
+        "string": "Количество",
+        "isFilteredBy": true
+      },
+      {
+        "name": "distance",
+        "isShown": true,
+        "string": "Расстояние",
+        "isFilteredBy": true
+      }
+    ]
+  },
+  "conditions": [
+    { "equals": { "string": "равно" } },
+    { "include": { "string": "содержит" } },
+    { "more": { "string": "больше" } },
+    { "less": { "string": "меньше" } }
+  ],
+  "pageLength": 30
+}
