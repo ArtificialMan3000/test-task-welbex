@@ -1,3 +1,12 @@
+# Запуск
+1. npm install
+2. npm start
+3. cd client
+4. npm install
+5. npm start
+6. Go to localhost:3000
+
+# Задание
 ### Нужно разработать таблицу в формате Single Page Application.
 
 **Требования к таблице.**
