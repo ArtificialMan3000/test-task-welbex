@@ -1,18 +1,6 @@
 import CONFIG from '../config';
 import { fetchJson } from './fetchJson';
 
-const template = [
-  {
-    key: '1',
-    cells: {
-      date: '2011-03-11T21:00:00.000Z',
-      name: 'Name 1',
-      amount: 12,
-      distance: 1000,
-    },
-  },
-];
-
 const transformEntries = (entries) => {
   const fields = CONFIG.entries.fields;
 
@@ -33,8 +21,14 @@ const transformEntries = (entries) => {
   });
 };
 
-export const fetchEntries = async () => {
-  const entries = await fetchJson('/getEntries');
-  // console.log('entries', entries);
+export const fetchEntries = async ({ sortBy, filter }) => {
+  const filterParams =
+    filter && filter.name && filter.condition && filter.value
+      ? `filter=${filter.name};${filter.condition};${filter.value}`
+      : '';
+  const sortParam = sortBy ? `sort=${sortBy}` : '';
+  const entries = await fetchJson(
+    CONFIG.endpoints.entries.get + `?${filterParams}&${sortParam}`
+  );
   return transformEntries(entries);
 };

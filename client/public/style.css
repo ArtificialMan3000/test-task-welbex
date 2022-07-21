@@ -1,6 +1,10 @@
-.app {
-  display: flex;
-  justify-content: center;
+.filter-wrapper {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.table-wrapper {
+  width: 100%;
 }
 
 .table {

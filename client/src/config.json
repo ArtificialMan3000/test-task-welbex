@@ -7,6 +7,7 @@
       {
         "name": "id",
         "isShown": false,
+        "isSortedBy": false,
         "isFilteredBy": false,
         "isKey": true
       },
@@ -14,33 +15,36 @@
         "name": "date",
         "isShown": true,
         "string": "Дата",
+        "isSortedBy": false,
         "isFilteredBy": false
       },
       {
         "name": "name",
         "isShown": true,
         "string": "Название",
-        "isFilteredBy": true
+        "isSortedBy": true,
+        "isFilteredBy": false
       },
       {
         "name": "amount",
         "isShown": true,
         "string": "Количество",
+        "isSortedBy": true,
         "isFilteredBy": true
       },
       {
         "name": "distance",
         "isShown": true,
         "string": "Расстояние",
+        "isSortedBy": true,
         "isFilteredBy": true
       }
     ]
   },
   "conditions": [
-    { "equals": { "string": "равно" } },
-    { "include": { "string": "содержит" } },
-    { "more": { "string": "больше" } },
-    { "less": { "string": "меньше" } }
+    { "name": "equals", "string": "равно" },
+    { "name": "more", "string": "больше" },
+    { "name": "less", "string": "меньше" }
   ],
   "pageLength": 30
 }
