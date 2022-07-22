@@ -1,3 +1,7 @@
+# Установка базы
+1. cd db/setup
+2. sh setup.sh
+
 # Запуск
 1. npm install
 2. npm start
